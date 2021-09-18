@@ -8,21 +8,21 @@
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <div class="conteiner">
+    <div class="container">
         <h1 class="center">Alura Typer</h1>
-        <p class="frase center">Casa no rio de janeiro grande.</p>
+        <p class="frase center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
         <ul class="informacoes center">
             <li>
                 <i class="small material-icons icones">description</i>
-                <span id="tamanho-frase">30</span> Palavras
+                <span id="tamanho-frase">8</span> Palavras
             </li>
             <li>
                 <i class="small material-icons icones">query_builder</i>
                 <span id="tempo-digitacao">3</span> Segundos
             </li>
         </ul>
-        <textarea class="campo-digitacao" cols="40" rows="8"></textarea>
+        <textarea class="campo-digitacao" rows="8" cols ="40"></textarea>
         
         <div class="botoes">
             <a id="botao-reiniciar" class="btn-floating btn-large waves-effect waves-light red">
@@ -31,23 +31,20 @@
         </div>
         
         <ul class="center">
-            <li><samp id="contador-caracteres">0</samp> Caracteres</li>
-            <li><samp id="contador-palavras">0</samp> Palavras</li>
+            <li><span id="contador-caracteres">0</span> Caracteres</li>
+            <li><span id="contador-palavras">0</span> Palavras</li>
         </ul>
         <section class="placar">
             <h3 class="center">Placar</h3>
             <table class="centered bordered">
                 <thead>
-                    <th>Nome</th>
-                    <th>N. de palavras</th>
-                    <tr>Remover</tr>
+                    <tr>
+                        <th>Nome</th>
+                        <th>No. de palavras</th>
+                        <th>Remover</th>
+                    </tr>    
                 </thead>
                 <tbody>
-                    <td>
-                        <a href="#" class="botao-remover">
-                            <i class="small material-icons">delete</i>
-                        </a>
-                    </td>
 
                 </tbody>
             </table>
@@ -56,5 +53,6 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/placar.js"></script>
 </body>
 </html>
