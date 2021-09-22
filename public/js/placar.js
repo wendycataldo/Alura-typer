@@ -7,7 +7,7 @@ $("#botao-sync").click(sincronizaPlacar);
 
 function inserePlacar(){
     var corpoTabela = $(".placar").find("tbody");
-    var usuario =  "wendy";
+    var usuario =  $("#usuarios").val();;
     var numPalavras = $("#contador-palavras").text();
     var botaoRemover = "<a href='#'><i class='small material-icons'>delete</i></a>";
     
@@ -69,9 +69,18 @@ function sincronizaPlacar(){
 
     var dados = { placar: placar};
 
-    $post("http://localhost:3000/placar", dados, function(){
+    //placar.js
 
-    })
+    $.post("http://localhost:3000/placar", dados , function() {
+        console.log("Placar sincronizado com sucesso");
+        $(".tooltip").tooltipster("open"); 
+    }).fail(function(){
+        $(".tooltip").tooltipster("open").tooltipster("content", "Falha ao sincronizar"); 
+    }).always(function(){ //novo
+        setTimeout(function() {
+        $(".tooltip").tooltipster("close"); 
+    }, 1200);
+    });
 }
 
 function atualizaPlacar(){
