@@ -1,2 +1,2 @@
-# Alura-typer
+# Jogo de Deigitacao
  Projeto usando JQuery 
